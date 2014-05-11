@@ -196,8 +196,6 @@ describe('Writer.write', function()
 
             parser.on('metadata', function(tags) {
 
-                console.log(tags);
-
                 tags.artist.should.containEql('Blur');
                 tags.title.should.be.equal('Song 3');
                 tags.album.should.be.equal('Blur');
@@ -212,8 +210,6 @@ describe('Writer.write', function()
                     if (err) {
                         console.log(err.stack);
                     }
-
-                    console.log(tags);
 
                     (!err).should.be.true;
 
