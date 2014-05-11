@@ -8,6 +8,7 @@ var should = require('should');
 var path = require('path');
 var fs = require('fs-extra');
 var id3 = require('id3js');
+var mm = require('musicmetadata');
 
 var File = require('../lib/file');
 var Image = require('../lib/image');
@@ -151,22 +152,13 @@ describe('Writer.write', function()
 
             (!err).should.be.true;
 
-            id3({
-                file: destFile,
-                type: id3.OPEN_LOCAL
-            }, function(err, tags) {
+            var parser = mm(fs.createReadStream(file.getPath()));
 
-                if (err) {
-                    console.log(err.stack);
-                }
+            parser.on('metadata', function(tags) {
 
-                (!err).should.be.true;
-
-                console.log(tags);
-
-                tags.v2.artist.should.be.equal('Blur');
-                tags.v2.title.should.be.equal('Song 2');
-                tags.v2.album.should.be.equal('Blur');
+                tags.artist.should.containEql('Blur');
+                tags.title.should.be.equal('Song 2');
+                tags.album.should.be.equal('Blur');
 
                 done();
             });
@@ -200,27 +192,32 @@ describe('Writer.write', function()
 
             (!err).should.be.true;
 
-            id3({
-                file: destFile,
-                type: id3.OPEN_LOCAL
-            }, function(err, tags) {
+            var parser = mm(fs.createReadStream(file.getPath()));
 
-                if (err) {
-                    console.log(err.stack);
-                }
+            parser.on('metadata', function(tags) {
 
-                (!err).should.be.true;
+                tags.artist.should.containEql('Blur');
+                tags.title.should.be.equal('Song 3');
+                tags.album.should.be.equal('Blur');
 
-                console.log(tags);
+                tags.picture.length.should.be.equal(2);
 
-                tags.v2.artist.should.be.equal('Blur');
-                tags.v2.title.should.be.equal('Song 3');
-                tags.v2.album.should.be.equal('Blur');
+                id3({
+                    file: file.getPath(),
+                    type: id3.OPEN_LOCAL
+                }, function(err, tags) {
 
-                tags.v2.image.type.should.be.equal('cover-back');
-                tags.v2.image.description.should.be.equal('Album back cover art');
+                    if (err) {
+                        console.log(err.stack);
+                    }
 
-                done();
+                    (!err).should.be.true;
+
+                    tags.v2.image.type.should.be.equal('cover-back');
+                    tags.v2.image.description.should.be.equal('Album back cover art');
+
+                    done();
+                });
             });
         });
     });

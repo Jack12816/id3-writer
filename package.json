@@ -19,12 +19,14 @@
     "mocha": "^1.18.2",
     "should": "^3.3.1",
     "fs-extra": "^0.8.1",
-    "id3js": "^1.1.2"
+    "id3js": "^1.1.2",
+    "musicmetadata": "^0.3.9"
   },
   "dependencies": {
     "async": "^0.8.0",
     "extend": "^1.2.1",
     "iconv": "^2.1.0",
-    "mime": "^1.2.11"
+    "mime": "^1.2.11",
+    "musicmetadata": "^0.3.9"
   }
 }
