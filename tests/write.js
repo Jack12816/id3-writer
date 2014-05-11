@@ -157,6 +157,8 @@ describe('Writer.write', function()
 
                 (!err).should.be.true;
 
+                console.log(tags);
+
                 tags.v2.artist.should.be.equal('Blur');
                 tags.v2.title.should.be.equal('Song 2');
                 tags.v2.album.should.be.equal('Blur');
@@ -201,6 +203,8 @@ describe('Writer.write', function()
                 }
 
                 (!err).should.be.true;
+
+                console.log(tags);
 
                 tags.v2.artist.should.be.equal('Blur');
                 tags.v2.title.should.be.equal('Song 3');
