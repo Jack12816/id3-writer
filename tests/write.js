@@ -140,12 +140,20 @@ describe('Writer.write', function()
 
         writer.setFile(file).write(meta, function(err) {
 
+            if (err) {
+                console.log(err.stack);
+            }
+
             (!err).should.be.true;
 
             id3({
                 file: destFile,
                 type: id3.OPEN_LOCAL
             }, function(err, tags) {
+
+                if (err) {
+                    console.log(err.stack);
+                }
 
                 (!err).should.be.true;
 
@@ -177,12 +185,20 @@ describe('Writer.write', function()
 
         writer.setFile(file).write(meta, function(err) {
 
+            if (err) {
+                console.log(err.stack);
+            }
+
             (!err).should.be.true;
 
             id3({
                 file: destFile,
                 type: id3.OPEN_LOCAL
             }, function(err, tags) {
+
+                if (err) {
+                    console.log(err.stack);
+                }
 
                 (!err).should.be.true;
 
