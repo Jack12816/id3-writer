@@ -1,4 +1,4 @@
-[![ID3 Writer logo](https://github.com/Jack12816/id3-writer/logo.png)]()
+[![ID3 Writer logo](https://raw.githubusercontent.com/Jack12816/id3-writer/master/logo.png)]()
 
 ID3 Writer is a small and tested library for writing ID3 tags to MP3
 files. We don't touch the files self - we speak to write adapters like
