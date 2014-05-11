@@ -70,7 +70,7 @@ var meta = new id3.Meta({
     album: 'Blur'
 }, [coverImage]);
 
-writer.setFile(file).write(meta, function(err) {
+writer.setFile(mp3).write(meta, function(err) {
 
     if (err) {
         // Handle the error
