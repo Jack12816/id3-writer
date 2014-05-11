@@ -1,6 +1,6 @@
 {
   "name": "id3-writer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Binding to id3lib and eyeD3",
   "main": "index.js",
   "scripts": {
