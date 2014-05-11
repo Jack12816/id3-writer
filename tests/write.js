@@ -131,7 +131,12 @@ describe('Writer.write', function()
 
     it('should write id3 (v1 and v2) tags', function(done) {
 
-        var writer = new Writer();
+        var writer = new Writer({
+            version: 2,
+            encoding: {
+                to: 'ISO-8859-1'
+            }
+        });
         var meta = new Meta({
             artist: 'Blur',
             song: 'Song 2',
@@ -183,7 +188,9 @@ describe('Writer.write', function()
         });
         meta.addImages([image1, image2]);
 
-        var writer = new Writer();
+        var writer = new Writer({
+            version: 2
+        });
 
         writer.setFile(file).write(meta, function(err) {
 
