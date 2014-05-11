@@ -1,6 +1,6 @@
 {
   "name": "id3-writer",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Binding to id3lib and eyeD3",
   "main": "index.js",
   "homepage": "https://github.com/Jack12816/id3-writer",
@@ -9,7 +9,7 @@
     "url": "git://github.com/Jack12816/id3-writer"
   },
   "bugs": {
-    "url": "https://github.com/Jack12816/greppy/issues"
+    "url": "https://github.com/Jack12816/id3-writer/issues"
   },
   "scripts": {
     "test": "make test"
