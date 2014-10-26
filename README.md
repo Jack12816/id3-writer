@@ -42,7 +42,7 @@ var writer = new id3.Writer();
 var file = new id3.File('/tmp/your.mp3');
 var meta = new id3.Meta({
     artist: 'Blur',
-    song: 'Song 2',
+    title: 'Song 2',
     album: 'Blur'
 });
 
@@ -68,7 +68,7 @@ var coverImage = new id3.Image('/tmp/cover.png');
 
 var meta = new id3.Meta({
     artist: 'Blur',
-    song: 'Song 2',
+    title: 'Song 2',
     album: 'Blur'
 }, [coverImage]);
 
@@ -84,17 +84,17 @@ writer.setFile(mp3).write(meta, function(err) {
 
 ### Supported metadata
 
-| Tag      | Description                        | libid3 notes               | eyeD3 notes                                             |
-|----------|------------------------------------|----------------------------|---------------------------------------------------------|
-| artist   | Artist of the song                 | -                          | -                                                       |
-| title    | Title of the song                  | -                          | -                                                       |
-| album    | Album of the song                  | -                          | -                                                       |
-| comment  | Further user comments              | -                          | -                                                       |
-| desc     | User comment description           | -                          | Same as comment                                         |
-| genre    | Genre of the song                  | Needs to be a genre number | All is possible: std ID3 genre names, ids and any other |
-| year     | The year the song was recorded     | -                          | -                                                       |
-| track    | Position of the track on the album | -                          | -                                                       |
-| total    | Amount of tracks on the album      | -                          | -                                                       |
+| Tag                         | Description                          | libid3 notes                 | eyeD3 notes                                               |
+| --------------------------- | ------------------------------------ | ---------------------------- | --------------------------------------------------------- |
+| artist                      | Artist of the song                   | -                            | -                                                         |
+| title (compatibility: song) | Title of the song                    | -                            | -                                                         |
+| album                       | Album of the song                    | -                            | -                                                         |
+| comment                     | Further user comments                | -                            | -                                                         |
+| desc                        | User comment description             | -                            | Same as comment                                           |
+| genre                       | Genre of the song                    | Needs to be a genre number   | All is possible: std ID3 genre names, ids and any other   |
+| year                        | The year the song was recorded       | -                            | -                                                         |
+| track                       | Position of the track on the album   | -                            | -                                                         |
+| total                       | Amount of tracks on the album        | -                            | -                                                         |
 
 #### ID3 genre list
 
