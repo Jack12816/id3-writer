@@ -6,7 +6,15 @@ REPORTER ?= spec
 all: test
 
 test:
-	@${NPM}/_mocha --slow 600 --timeout 2000 --reporter $(REPORTER) tests/
+	@${NPM}/istanbul cover \
+		${NPM}/_mocha \
+			--report lcovonly \
+			-- tests/ \
+			--slow 600 \
+			--timeout 2000 \
+			--reporter $(REPORTER) \
+		&& cat ./coverage/lcov.info \
+		| ${NPM}/coveralls && rm -rf ./coverage
 
 .PHONY: test
 

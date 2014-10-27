@@ -12,6 +12,8 @@ for a write adapter with Windows support I will not reject it.
 [![npm Downloads](http://img.shields.io/npm/dm/id3-writer.svg)](https://www.npmjs.org/package/id3-writer)
 [![npm Version](http://img.shields.io/npm/v/id3-writer.svg)](https://www.npmjs.org/package/id3-writer)
 [![Dependency Status](https://david-dm.org/jack12816/id3-writer.png)](https://david-dm.org/jack12816/id3-writer)
+[![Code Climate](https://codeclimate.com/github/Jack12816/id3-writer/badges/gpa.svg)](https://codeclimate.com/github/Jack12816/id3-writer)
+[![Coverage Status](https://coveralls.io/repos/Jack12816/id3-writer/badge.png)](https://coveralls.io/r/Jack12816/id3-writer)
 
 ## Features
 
