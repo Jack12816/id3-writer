@@ -141,7 +141,8 @@ describe('Writer.write', function()
         var meta = new Meta({
             artist: 'Blur',
             song: 'Song 2',
-            album: 'Blur'
+            album: 'Blur',
+            lyric:"Wooooo hoooo! Wooooo hoooo! Wooooo hoooo! Wooooo hoooo! I got my head checked By a jumbo jet It wasn't easy but nothing i-is No (Wooooo hooooooo!) When I feel heavy metal (Wooooo hooooooo!) And I'm pins and I'm needles (Wooooo hooooooo!) Well, I lie and I'm easy All of the time but I am never sure Why I need you Pleased to meet you I got my head done When I was young It's not my problem It's not my problem (Wooooooooo hooooooo!) When I feel heavy metal (Wooooo hooooooo!) And I'm pins and I'm needles (Wooooo hooooooo!) Well, I lie and I'm easy All of the time but I am never sure Why I need you Pleased to meet you Yeah yeah! Yeah yeah! Yeah yeah! Oh yeah"
         });
 
         writer.setFile(file).write(meta, function(err) {
