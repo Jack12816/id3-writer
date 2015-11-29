@@ -58,7 +58,7 @@ writer.setFile(file).write(meta, function(err) {
 });
 ```
 
-### Write ID3 tags with a additional image
+### Write ID3 tags with an additional image
 
 ```js
 // Load and assign modules
