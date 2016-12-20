@@ -96,7 +96,9 @@ writer.setFile(mp3).write(meta, function(err) {
 | genre                       | Genre of the song                    | Needs to be a genre number   | All is possible: std ID3 genre names, ids and any other   |
 | year                        | The year the song was recorded       | -                            | -                                                         |
 | track                       | Position of the track on the album   | -                            | -                                                         |
-| total                       | Amount of tracks on the album        | -                            | -                                                         |
+| total                       | Amount of tracks on the album        | -                            | 
+| lyric                       | Track lyrics       | -                            | 
+-                                                         |
 
 #### ID3 genre list
 
